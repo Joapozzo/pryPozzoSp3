@@ -38,7 +38,23 @@ namespace pryPozzoSp3
             // inicializar la variable que controla la cantidad de elementos cargados
             Cantidad = 0;
             // establecer el estado inicial de todos los componentes de la interfaz
-            inicializarInterfaz();
+            //inicializarInterfaz();
         }
-      }
+
+        private void txtNroTurno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && !char.IsControl(e.KeyChar)) // se borrarán las teclas fuera del rango '0' al '9' menos todos las teclas que sean controles.
+{
+                e.Handled = true; // borrar la tecla ingresada
+            }
+        }
+
+        private void txtNroTurno_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNroTurno.Text != "")
+            {
+                txtDominio.Text enabled = true;
+            }
+        }
+    }
 }
