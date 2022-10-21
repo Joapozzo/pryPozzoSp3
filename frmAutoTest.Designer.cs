@@ -34,21 +34,21 @@
             this.lblAñoFabricacion = new System.Windows.Forms.Label();
             this.lblDominio = new System.Windows.Forms.Label();
             this.txtDominio = new System.Windows.Forms.TextBox();
-            this.numAnioFabricacion = new System.Windows.Forms.NumericUpDown();
+            this.numAñoFabricacion = new System.Windows.Forms.NumericUpDown();
             this.txtNroTurno = new System.Windows.Forms.TextBox();
             this.lblNroTurno = new System.Windows.Forms.Label();
             this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
             this.txtCantDominio = new System.Windows.Forms.TextBox();
             this.lblCantDominio = new System.Windows.Forms.Label();
-            this.lblAnioAntiguo = new System.Windows.Forms.Label();
+            this.lblAñoAntiguo = new System.Windows.Forms.Label();
             this.lblCantTurnos = new System.Windows.Forms.Label();
-            this.txtAnioAntiguo = new System.Windows.Forms.TextBox();
+            this.txtAñoAntiguo = new System.Windows.Forms.TextBox();
             this.txtCantTurnos = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.mrcRegistro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAnioFabricacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAñoFabricacion)).BeginInit();
             this.mrcEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.mrcRegistro.Controls.Add(this.lblAñoFabricacion);
             this.mrcRegistro.Controls.Add(this.lblDominio);
             this.mrcRegistro.Controls.Add(this.txtDominio);
-            this.mrcRegistro.Controls.Add(this.numAnioFabricacion);
+            this.mrcRegistro.Controls.Add(this.numAñoFabricacion);
             this.mrcRegistro.Controls.Add(this.txtNroTurno);
             this.mrcRegistro.Controls.Add(this.lblNroTurno);
             this.mrcRegistro.Location = new System.Drawing.Point(9, 10);
@@ -80,6 +80,7 @@
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(238, 20);
             this.txtTitular.TabIndex = 9;
+            this.txtTitular.TextChanged += new System.EventHandler(this.txtTitular_TextChanged);
             // 
             // lblTitular
             // 
@@ -120,30 +121,32 @@
             this.txtDominio.Name = "txtDominio";
             this.txtDominio.Size = new System.Drawing.Size(104, 20);
             this.txtDominio.TabIndex = 5;
+            this.txtDominio.TextChanged += new System.EventHandler(this.txtDominio_TextChanged);
             // 
-            // numAnioFabricacion
+            // numAñoFabricacion
             // 
-            this.numAnioFabricacion.Enabled = false;
-            this.numAnioFabricacion.Location = new System.Drawing.Point(100, 105);
-            this.numAnioFabricacion.Margin = new System.Windows.Forms.Padding(2);
-            this.numAnioFabricacion.Maximum = new decimal(new int[] {
+            this.numAñoFabricacion.Enabled = false;
+            this.numAñoFabricacion.Location = new System.Drawing.Point(100, 105);
+            this.numAñoFabricacion.Margin = new System.Windows.Forms.Padding(2);
+            this.numAñoFabricacion.Maximum = new decimal(new int[] {
             2021,
             0,
             0,
             0});
-            this.numAnioFabricacion.Minimum = new decimal(new int[] {
+            this.numAñoFabricacion.Minimum = new decimal(new int[] {
             1950,
             0,
             0,
             0});
-            this.numAnioFabricacion.Name = "numAnioFabricacion";
-            this.numAnioFabricacion.Size = new System.Drawing.Size(57, 20);
-            this.numAnioFabricacion.TabIndex = 4;
-            this.numAnioFabricacion.Value = new decimal(new int[] {
+            this.numAñoFabricacion.Name = "numAñoFabricacion";
+            this.numAñoFabricacion.Size = new System.Drawing.Size(57, 20);
+            this.numAñoFabricacion.TabIndex = 4;
+            this.numAñoFabricacion.Value = new decimal(new int[] {
             1950,
             0,
             0,
             0});
+            this.numAñoFabricacion.ValueChanged += new System.EventHandler(this.numAñoFabricacion_ValueChanged);
             // 
             // txtNroTurno
             // 
@@ -170,9 +173,9 @@
             // 
             this.mrcEstadisticas.Controls.Add(this.txtCantDominio);
             this.mrcEstadisticas.Controls.Add(this.lblCantDominio);
-            this.mrcEstadisticas.Controls.Add(this.lblAnioAntiguo);
+            this.mrcEstadisticas.Controls.Add(this.lblAñoAntiguo);
             this.mrcEstadisticas.Controls.Add(this.lblCantTurnos);
-            this.mrcEstadisticas.Controls.Add(this.txtAnioAntiguo);
+            this.mrcEstadisticas.Controls.Add(this.txtAñoAntiguo);
             this.mrcEstadisticas.Controls.Add(this.txtCantTurnos);
             this.mrcEstadisticas.Location = new System.Drawing.Point(9, 209);
             this.mrcEstadisticas.Margin = new System.Windows.Forms.Padding(2);
@@ -202,15 +205,15 @@
             this.lblCantDominio.TabIndex = 14;
             this.lblCantDominio.Text = "Cantidad con dominio de 6 caracteres";
             // 
-            // lblAnioAntiguo
+            // lblAñoAntiguo
             // 
-            this.lblAnioAntiguo.AutoSize = true;
-            this.lblAnioAntiguo.Location = new System.Drawing.Point(4, 66);
-            this.lblAnioAntiguo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAnioAntiguo.Name = "lblAnioAntiguo";
-            this.lblAnioAntiguo.Size = new System.Drawing.Size(104, 13);
-            this.lblAnioAntiguo.TabIndex = 13;
-            this.lblAnioAntiguo.Text = "Año del mas Antiguo";
+            this.lblAñoAntiguo.AutoSize = true;
+            this.lblAñoAntiguo.Location = new System.Drawing.Point(4, 66);
+            this.lblAñoAntiguo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAñoAntiguo.Name = "lblAñoAntiguo";
+            this.lblAñoAntiguo.Size = new System.Drawing.Size(104, 13);
+            this.lblAñoAntiguo.TabIndex = 13;
+            this.lblAñoAntiguo.Text = "Año del mas Antiguo";
             // 
             // lblCantTurnos
             // 
@@ -222,14 +225,14 @@
             this.lblCantTurnos.TabIndex = 10;
             this.lblCantTurnos.Text = "Cantidad de Turnos";
             // 
-            // txtAnioAntiguo
+            // txtAñoAntiguo
             // 
-            this.txtAnioAntiguo.Location = new System.Drawing.Point(190, 63);
-            this.txtAnioAntiguo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAnioAntiguo.Name = "txtAnioAntiguo";
-            this.txtAnioAntiguo.ReadOnly = true;
-            this.txtAnioAntiguo.Size = new System.Drawing.Size(76, 20);
-            this.txtAnioAntiguo.TabIndex = 12;
+            this.txtAñoAntiguo.Location = new System.Drawing.Point(190, 63);
+            this.txtAñoAntiguo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAñoAntiguo.Name = "txtAñoAntiguo";
+            this.txtAñoAntiguo.ReadOnly = true;
+            this.txtAñoAntiguo.Size = new System.Drawing.Size(76, 20);
+            this.txtAñoAntiguo.TabIndex = 12;
             // 
             // txtCantTurnos
             // 
@@ -259,6 +262,7 @@
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnConsultar
             // 
@@ -286,7 +290,7 @@
             this.Load += new System.EventHandler(this.frmAutoTest_Load);
             this.mrcRegistro.ResumeLayout(false);
             this.mrcRegistro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAnioFabricacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAñoFabricacion)).EndInit();
             this.mrcEstadisticas.ResumeLayout(false);
             this.mrcEstadisticas.PerformLayout();
             this.ResumeLayout(false);
@@ -301,15 +305,15 @@
         private System.Windows.Forms.Label lblAñoFabricacion;
         private System.Windows.Forms.Label lblDominio;
         private System.Windows.Forms.TextBox txtDominio;
-        private System.Windows.Forms.NumericUpDown numAnioFabricacion;
+        private System.Windows.Forms.NumericUpDown numAñoFabricacion;
         private System.Windows.Forms.TextBox txtNroTurno;
         private System.Windows.Forms.Label lblNroTurno;
         private System.Windows.Forms.GroupBox mrcEstadisticas;
         private System.Windows.Forms.TextBox txtCantDominio;
         private System.Windows.Forms.Label lblCantDominio;
-        private System.Windows.Forms.Label lblAnioAntiguo;
+        private System.Windows.Forms.Label lblAñoAntiguo;
         private System.Windows.Forms.Label lblCantTurnos;
-        private System.Windows.Forms.TextBox txtAnioAntiguo;
+        private System.Windows.Forms.TextBox txtAñoAntiguo;
         private System.Windows.Forms.TextBox txtCantTurnos;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistrar;
