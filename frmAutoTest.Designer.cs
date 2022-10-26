@@ -255,6 +255,7 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Enabled = false;
             this.btnRegistrar.Location = new System.Drawing.Point(455, 17);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
